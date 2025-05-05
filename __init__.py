@@ -1,10 +1,15 @@
-from .image_nodes import *
+from .nodes import *
 
 nodes_config = {
-     # image_nodes
-     "RemoveHighlightAndBlur": {"class":RemoveHighlightAndBlur, "name":'RemoveHighlightAndBlur'}
-    ,"RoundedCorners":{"class":RoundedCorners, "name":'RoundedCorners'}
-    ,"PaddingAccordingToBackground":{'class':PaddingAccordingToBackground, "name":'PaddingAccordingToBackground'}
+     # nodes
+     "RemoveHighlightAndBlur": {'class':RemoveHighlightAndBlur, 'name':'RemoveHighlightAndBlur'}
+    ,"RoundedCorners":{'class':RoundedCorners, 'name':'RoundedCorners'}
+    ,"PaddingAccordingToBackground":{'class':PaddingAccordingToBackground, 'name':'PaddingAccordingToBackground'}
+    ,"QwenCaption":{'class':QwenCaption,'name':'QwenCaption'}
+    ,"RemoveBackground":{'class':RemoveBackground,'name':'RemoveBackground'}
+    ,'RemoveBackgroundWithProtection':{'class':RemoveBackgroundWithProtection,'name':'RemoveBackgroundWithProtection'}
+    ,'RemoveBackgroundWithProtectionOptimized':{'class':RemoveBackgroundWithProtectionOptimized, 'name':'RemoveBackgroundWithProtectionOptimized'}
+    ,"EstimateBackgroundFromTriangleCorners":{'class':EstimateBackgroundFromTriangleCorners,'name':'EstimateBackgroundFromTriangleCorners'}
 }
 
 def analysis_nodes_config(nodes_config):
@@ -17,4 +22,4 @@ def analysis_nodes_config(nodes_config):
 
     return NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS
 
-__all__ = [NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS]
+# __all__ = [NODE_CLASS_MAPPINGS, NODE_DISPLAY_NAME_MAPPINGS]
